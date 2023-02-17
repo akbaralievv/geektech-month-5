@@ -4,6 +4,7 @@ export default function PortfolioPage(){
     const navigate=useNavigate()
     const [photos,setPhotos]=useState([])
     const [update, setUpdate] = useState(false);
+    const [url,setUrl]=useState([])
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/photos')
             .then(resp=>resp.json())
@@ -20,12 +21,12 @@ export default function PortfolioPage(){
                 {photos.slice(0,10).map(photos=><div>
                     <img src={photos.url} alt="" style={{width:'200px'}}/>
                    <p>{photos.title}</p>
-                   <button>узнать url фото</button>
+                   <button onClick={()=>setUrl(photos.url)}>узнать url фото</button>
                     <p>------------------------------</p>
                 </div>)}
             </div>
                 <h2>
-                    url фото: 
+                    url фото: {url}
                 </h2>
             </div>
         </div>

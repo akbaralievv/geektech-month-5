@@ -5,6 +5,7 @@ import NavBar from "./components/navBar/NavBar";
 import PortfolioPage from "./pages/portfolioPage/PortfolioPage";
 import { LoginPage } from "./pages/loginPage/LoginPage";
 import Layout from "./components/hoc/Layout";
+import NewPage from "./pages/newPage/NewPage";
 function App() {
   return (
    <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
             <Route index element={<MainPage/>} />
             <Route path="about" element={<AboutPage/>} />
             <Route path="portfolio" element={<PortfolioPage/>}/>
+            <Route path="newpage" element={<NewPage/>}/>
       </Route>
 
       <Route path="login" element={<LoginPage></LoginPage>}/>
