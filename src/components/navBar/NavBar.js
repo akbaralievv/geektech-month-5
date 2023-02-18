@@ -18,6 +18,9 @@ export default function NavBar(){
             <li style={{marginLeft:'15px'}}>
                 <NavLink to="/newpage">New Page</NavLink>
             </li>
+            <li style={{marginLeft:'15px'}}>
+                <NavLink to='/users'>Users Page</NavLink>
+            </li>
         </ul>
     )
 }
