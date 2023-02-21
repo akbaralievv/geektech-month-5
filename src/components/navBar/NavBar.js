@@ -21,6 +21,9 @@ export default function NavBar(){
             <li style={{marginLeft:'15px'}}>
                 <NavLink to='/users'>Users Page</NavLink>
             </li>
+            <li style={{marginLeft:'15px'}}>
+                <NavLink to='/photo'>Photo Page</NavLink>
+            </li>
         </ul>
     )
 }

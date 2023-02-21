@@ -9,6 +9,8 @@ import NewPage from "./pages/newPage/NewPage";
 import UsersPage from "./pages/usersPage/UsersPage";
 import UserMoreInfo from "./components/userMorInfo/UserMoreInfo";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
+import PhotoPage from "./pages/photoPage/PhotoPage";
+import PhotoMoreInfo from "./components/photoMoreInfo/PhotoMoreInfo";
 function App() {
   return (
    <BrowserRouter>
@@ -21,6 +23,8 @@ function App() {
             <Route path="/users" element={<UsersPage/>}></Route>
             <Route path="/users/:id" element={<UserMoreInfo/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
+            <Route path="/photo/:id" element={<PhotoMoreInfo/>}/>
+            <Route path="/photo" element={<PhotoPage/>}/>
       </Route>
 
       <Route path="login" element={<LoginPage></LoginPage>}/>
